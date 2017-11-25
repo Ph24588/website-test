@@ -1,1 +1,11 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 729.69 426.66"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:blue;stroke-miterlimit:10;stroke-width:3px;}.cls-2{fill:#fff;}</style></defs><title>copyBorder</title><polygon class="cls-1" points="678.19 1.57 1.5 31.57 1.5 375.11 678.19 345.11 678.19 1.57"/><polygon class="cls-2" points="728.19 425.06 1.5 375.06 1.5 31.52 728.19 81.52 728.19 425.06"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 729.7 426.7" style="enable-background:new 0 0 729.7 426.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#0000FF;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<title>copyBorder</title>
+<polygon class="st0" points="676.7,0 0,30 0,373.5 676.7,343.5 "/>
+<polygon class="st0" points="728.2,425.1 1.5,375.1 1.5,31.5 728.2,81.5 "/>
+</svg>
