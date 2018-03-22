@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pupper</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body style="overflow-x: hidden;">
+
+<style>
+* {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+	margin:0;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 2.5em;
+	margin-left: 12%;
+	margin-top: 150px;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 2em;
+	margin-left: 12%;
+	margin-top: 75px;
+	color: white;
+}
+
+.back {
+	top: 50px;
+	left: 35px;
+	position: fixed;
+	background: blue;
+	padding: 15px 15px 10px 15px;
+	border-radius: 100px;
+	color: white;
+	text-decoration: none;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+	z-index: 100;
+}
+
+.back img {
+	width: 20px;
+	height: auto;
+}
+
+.copyA {
+	width: 305px;
+	height: auto;
+	float: left;
+	margin-left: 12%;
+	margin-top: 65px;
+	line-height: 26px;
+}
+
+.copyB {
+	width: 305px;
+	height: auto;
+	float: left;
+	margin-left: 12%;
+	margin-top: 65px;
+	line-height: 26px;
+	color: white;
+	margin-top: 0;
+}
+
+.mockup {
+	width: 600px;
+	height: auto;
+	position: relative;
+	margin-right: 100px;
+	float: right;
+	opacity: 0;
+	margin-bottom: -325px;
+	margin-top: -175px;
+}
+
+.background {
+	top: 600px;
+	left: 0;
+	width: 100%;
+/*	min-height: 1960px;*/
+	height: auto; 
+	display: block;
+	position: absolute;
+	z-index: -100;
+}
+
+.copyBContainer {
+	position: fixed;
+	display: block;
+	top: 0px;
+	left: 700px;
+	margin-top: 10px;
+	width: auto;
+	z-index: -1;
+}
+
+.researchContainer {
+	top: 1100px;
+	left: 12%;
+	width: auto;
+	height: 1050px;
+	display: block;
+	position: absolute;
+}
+
+.research {
+	width: 450px;
+	height: 300px;
+	box-shadow: 2px 3px 10px black;
+	position: absolute;
+}
+
+.wireframe {
+	position: absolute;
+	display: block;
+	top: 2800px;
+	left: 12%;
+	width: 650px;
+	box-shadow: 2px 3px 10px black;
+	height: auto;
+}
+
+.wireframeContainer {
+	top: 2900px;
+	left: 12%;
+	width: 1200px;
+	height: 100px;
+	display: block;
+	position: absolute;
+}
+
+.copyC_1 {
+	width: 305px;
+	height: auto;
+	margin-top: 0;
+	line-height: 26px;
+	color: black;
+	position: relative;
+	display: none;
+	margin-right: 48px;
+	float: left;
+}
+
+.copyC_2 {
+	width: 305px;
+	height: auto;
+	margin-top: 0;
+	line-height: 26px;
+	color: black;
+	position: relative;
+	display: none;
+	margin-right: 48px;
+	float: left;
+}
+
+.copyC_3 {
+	width: 305px;
+	height: auto;
+	margin-top: 0;
+	line-height: 26px;
+	color: black;
+	position: relative;
+	display: none;
+	margin-right: 48px;
+	float: left;
+}
+
+.wideContainer {
+	top: 4750px;
+	width: 100%;
+	height: 500px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: block;
+	position: absolute;
+}
+
+.finalMockup {
+	width: 600px;
+	margin-right: -100px;
+	height: auto;
+	position: relative;
+	display: inline-block;
+}
+
+.wideContainer::-webkit-scrollbar { 
+    display: none; 
+}
+
+.copyDContainer {
+	top: 5190px;
+	left: 12%;
+	width: auto;
+	height: 100px;
+	display: block;
+	position: absolute;
+}
+
+.copyD {
+	width: 305px;
+	height: auto;
+	margin-top: 0;
+	line-height: 26px;
+	color: white;
+	position: relative;
+	margin-right: 48px;
+	float: left;
+}
+
+@media (max-width: 1143px) and (min-width: 879px) {
+	.mockup {
+		margin-right: -15%;
+	}
+
+	.copyBContainer {
+		left: 600px;
+	}
+}
+
+@media (max-width: 985px) {
+	.copyBContainer {
+		left: 12%;
+		width: 900px;
+		top: 300px;
+	}
+
+	.copyB {
+		margin-left: 0;
+	}
+
+	#copyB_right {
+		margin-left: 30px;	
+	}
+
+	h2 {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 878px) and (min-width: 708px) {
+	.mockup {
+		margin-right: -42%;
+	}
+}
+
+@media (max-width: 707px) and (min-width: 612px) {
+	.mockup {
+		margin-right: -60%;
+	}
+}
+
+@media (max-width: 611px) {
+	.mockup {
+		display: none;
+	}
+
+	.researchContainer {
+		top: 1100px;
+		left: 12%;
+		width: auto;
+		height: 1050px;
+		display: block;
+		position: absolute;
+	}
+
+	.research {
+		width: 450px;
+		height: 300px;
+		box-shadow: 2px 3px 10px black;
+		position: absolute;
+	}
+}
+</style>
+		<img class="background" src="gradient.svg">
+		<a class="back" href="/"><img src="home.svg"></a>
+		<h1>Pupper</h1>
+		<p class="copyA">Have you ever wanted a dog, but without the responsibility of owning one? What if there was an app that let you rent one for a weekend, or even for an event? Pupper is an iOS application that allows you to do just that.</p>
+		<img class="mockup" id="mockup_1" src="screenTest.png">
+		<img class="mockup" id="mockup_2" src="screenTest.png">
+		<img class="mockup" id="mockup_3" src="screenTest.png">
+		<div class="researchContainer">
+			<img class="research" id="research_1" src="test.jpg">
+			<img class="research" id="research_2" src="test.jpg">
+			<img class="research" id="research_3" src="test.jpg">
+		</div>
+		<div class="copyBContainer">
+			<h2>Research</h2>
+			<p class="copyB">This app concept was created in a UX class taught by Matt Smith from MDS. This service focuses on delivering live animals to strangers that will play and take care of them for a short period of time. Usually I would begin by stating objective, scope, and use cases, but accident prevention would be a high priority, so I stated my edge cases first. </p>
+			<p class="copyB" id="copyB_right">The goal was for users to be able to rent a dog for a short period of time, whether it be for an event like a birthday party, or just a casual jog. I wrote personas for common scenarios and use cases for renting different types of dogs. Of course, safety for both parties was a focus as well. These dogs needed to be presented like they were living beings, not objects.</p>
+		</div>
+		<img class="wireframe" id="wireframe_1" src="test.jpg">
+		<img class="wireframe" id="wireframe_2" src="test.jpg">
+		<img class="wireframe" id="wireframe_3" src="test.jpg">
+		<div class="wireframeContainer">
+			<h2 style="color:black; margin-left: 0;">Wireframe</h2>
+			<p class="copyC_1">With my groundwork done, I started sketching out solutions for the dog rentals. Each dog has a few details: the name, breed, cost, description, and three key characteristics: age group, activity level, and temperament.</p>
+			<p class="copyC_1">The filtering system is based off of these characteristics. I highly emphasized the name and the personality of each dog to further “humanize” each dog as to remind the user that these are live animals.</p>
+			<p class="copyC_2">To easily display this information, I went with a cell view for bite-sized entries.</p>
+			<p class="copyC_2">The details page included the dog’s information, a date picker, and the “add to kennel” button.</p>
+			<p class="copyC_3">To maintain a simple and intuitive interface, I used typography and white space to properly group the necessary information together to create hierarchy.</p>
+		</div>
+		<img class="background" src="gradient2.svg" style="top: 4500px;">
+		<div class="wideContainer">
+		<div style="width: 150px; height: 100px; float: left;"></div>
+	    	<img class="finalMockup" id="finalMockup_1" src="screenTest.png">
+	    	<img class="finalMockup" id="finalMockup_2" src="screenTest.png">
+	    	<img class="finalMockup" id="finalMockup_3" src="screenTest.png">
+	    	<img class="finalMockup" id="finalMockup_4" src="screenTest.png">
+	    	<img class="finalMockup" id="finalMockup_5" src="screenTest.png">
+	    </div>
+	    <div class="copyDContainer">
+			<h2 style="margin-left: 0;">Research</h2>
+	    	<p class="copyD">The message I wanted to give with my art direction was that every dog was going to be a new adventure. That with your new friend, you could embark (pun intended) on a journey. To do this, I went with a “granola”, wanderlust aesthetic that would appeal to a younger audience.</p>
+			<p class="copyD"> I also made sure that each dog looked just as excited as a user might be renting the dog. I wanted to emphasize imagery, white space, and typography throughout the UI.</p>
+			<p class="copyD">There were a few questions I couldn’t find a good answer to throughout the project, like how one could properly put a price on a dog and where the dogs would be rented from. Ideally they would come from shelters, but they would need to be trained specifically to be rented out.</p>
+	    </div>
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+  $("#mockup_1").animate({
+    marginTop: "+=50",
+    opacity: "1"
+  }, 500);
+
+    $("#mockup_2").delay(100).animate({
+    marginTop: "+=50",
+    opacity: "1"
+  }, 500);
+
+      $("#mockup_3").delay(200).animate({
+    marginTop: "+=50",
+    opacity: "1"
+  }, 500);
+
+var scrollValue;
+$(".copyBContainer").hide();
+
+$(document).scroll(function(){
+	scrollValue = $(document).scrollTop();
+	// console.log($(document).width());
+	if (scrollValue < 400) {
+		$("#mockup_1").css("margin-top", -125 + scrollValue/12);
+		$("#mockup_2").css("margin-top", -125 + scrollValue/11.9);
+		$("#mockup_3").css("margin-top", -125 + scrollValue/11.8);
+	};
+ 	
+console.log(scrollValue);
+
+	// $(".copyBContainer").css("top", scrollValue);
+
+	if (scrollValue > 300 && scrollValue < 1500) {
+		$(".copyBContainer").fadeIn(500);
+	} else if (scrollValue > 2300 || scrollValue < 300) {
+		$(".copyBContainer").fadeOut(500);
+	};
+
+	const mq = window.matchMedia("(max-width: 709px)");
+
+		console.log(scrollValue <= 930 && mq.matches);
+
+    if (scrollValue <= 1030) {
+    	$("#research_1, #research_2, #research_3").css("position", "absolute");
+       	$("#research_1, #research_2, #research_3").css("top", 0);  
+       	console.log("not matches 930");
+	} else if (scrollValue > 1030 && scrollValue < 1230) {
+    	$("#research_1, #research_2, #research_3").css("position", "fixed");
+       	$("#research_1, #research_2, #research_3").css("top", 70);
+    	console.log("not matches 1230");
+    };
+
+    if (scrollValue >= 1230 && scrollValue < 1580) {
+    	$("#research_3").css("position", "absolute");
+       	$("#research_3").css("top", 200);  
+    } else if (scrollValue >= 1580 && scrollValue < 1930) {
+    	$("#research_2").css("position", "absolute");
+       	$("#research_2").css("top", 550);  
+    } else if (scrollValue >= 1930 && scrollValue < 2280) {
+    	$("#research_1").css("position", "absolute");
+       	$("#research_1").css("top", 900);  
+        //media query
+    // } else if (scrollValue >= 1230 && scrollValue < 1580 && mq.media.matches) {
+    // 	$("#research_3").css("position", "absolute");
+    //    	$("#research_3").css("top", 270);  
+    // } else if (scrollValue >= 1580 && scrollValue < 1930 && mq.media.matches) {
+    // 	$("#research_2").css("position", "absolute");
+    //    	$("#research_2").css("top", 620);  
+    // } else if (scrollValue >= 1930 && scrollValue < 2280 && mq.media.matches) {
+    // 	$("#research_1").css("position", "absolute");
+    //    	$("#research_1").css("top", 970);  
+    };
+
+    if (scrollValue <= 2750) {
+    	$(".wireframe, .wireframeContainer").css("position", "absolute");
+       	$(".wireframe").css("top", 2800);
+       	$(".wireframeContainer").css("top", 3190);  
+    } else if (scrollValue > 2750 && scrollValue < 3650) {
+    	$(".wireframe, .wireframeContainer").css("position", "fixed");
+       	$(".wireframe").css("top", 50);
+       	$(".wireframeContainer").css("top", 440);
+    } else if (scrollValue >= 3650) {
+    	$(".wireframe, .wireframeContainer").css("position", "absolute");
+       	$(".wireframe").css("top", 3700);
+       	$(".wireframeContainer").css("top", 4090);  
+    };
+    $("#wireframe_1").show();
+    $("#wireframe_2").hide();
+    $("#wireframe_3").hide();
+
+    if (scrollValue < 3000) {
+       	$(".copyC_1").show();
+       	$(".copyC_2").hide();
+       	$(".copyC_3").hide();
+	    $("#wireframe_1").show();
+	    $("#wireframe_2").hide();
+	    $("#wireframe_3").hide();
+    } else if (scrollValue >= 3000 && scrollValue < 3350) {
+       	$(".copyC_1").hide();
+       	$(".copyC_2").show();
+       	$(".copyC_3").hide();
+	    $("#wireframe_1").hide();
+	    $("#wireframe_2").show();
+	    $("#wireframe_3").hide();
+    } else if (scrollValue >= 3350 && scrollValue < 3650) {
+       	$(".copyC_1").hide();
+       	$(".copyC_2").hide();
+       	$(".copyC_3").show();
+	    $("#wireframe_1").hide();
+	    $("#wireframe_2").hide();
+	    $("#wireframe_3").show();
+    };
+});
+
+</script>
+</body>
+<!-- Skrollr -->
+<!--   <script type="text/javascript" src="skrollr.js"></script>
+  <script type="text/javascript">
+  var s = skrollr.init();
+  </script> -->
+</html>

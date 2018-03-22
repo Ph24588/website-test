@@ -3,435 +3,89 @@
 <head>
   <title></title>
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+</head>
 <body>
-
-<style>
-h1 {
-  font-family: 'Nunito Sans', sans-serif;
-  line-height: 70px;
-  font-weight: 800;
-  font-size: 4em;
-  transform: skewY(-4deg);
-  transition: color .3s;
-  margin-left: 15%;
-  width: 500px;
-}
-
-h1:hover {
-  color: blue;
-  transition: color .3s;
-}
-
-
-p {
-  transform: skewY(4deg);
-  color: blue;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.5em;
-  position: fixed;
-  margin-left: 55%;
-  margin-top: -38%;
-  width: 500px;
-}
-
-.mediaIcons {
-  width: 40px;
-  top: 125px;
-  position: fixed;
-  display: inline;
-  margin-left: 90%;
-  opacity: .3;
-  transition: opacity .5s;
-}
-
-.mediaIcons:hover {
-  opacity: 1;
-  transition: opacity .5s;
-}
-
-.about {
-  color: lightgrey;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.5em;
-  float: left;
-  transform: rotateZ(-90deg);
-  margin-left: -100px;
-  margin-top: -770px;
-  position: fixed;
-  transition: color .3s;
-}
-
-.about:hover {
-  color: black;
-  transition: color .3s;
-}
-
-.switch {
-  color: lightgrey;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.5em;
-  float: left;
-  transform: rotateZ(-90deg);
-  margin-left: -87px;
-  margin-top: -360px;
-  position: fixed;
-  transition: color .3s;
-}
-
-.switch:hover {
-  color: blue;
-  transition: color .3s;;
-}
-
-.copyBorder {
-  z-index: -1;
-  width: 530px;
-  height: 332px;
-  position: fixed;
-  margin-left: 52%;
-  margin-top: -45%;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: blue;
-    transition: width .3s;
-}
-
-a:hover::after {
-    width: 100%;
-    transition: width .3s;
-}
-
-a::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: blue;
-    transition: width .3s;
-}
-
-a:hover::before {
-    width: 100%;
-    transition: width .3s;
-}
-
-.amazonImg {
-    position: fixed;
-    width: 50%;
-    height: 60%;
-    top: 200px;
-    left: 30%;
-    z-index: -1;
-    transform: skewY(4deg);
-    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, .25);
-
-    background: #ff0000;
-    background: -moz-linear-gradient(top,  #ff0000 0%, #ff00ff 100%);
-    background: -webkit-linear-gradient(top,  #ff0000 0%,#ff00ff 100%);
-    background: linear-gradient(to bottom,  #ff0000 0%,#ff00ff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff00ff',GradientType=0 );
-
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 6em;
-    text-align: center;
-    font-weight: 800;
-}
-
-.appleImg {
-    position: fixed;
-    width: 50%;
-    height: 60%;
-    top: 200px;
-    left: 30%;
-    z-index: -1;
-    transform: skewY(4deg);
-    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, .25);
-
-    background: #00ffff;
-    background: -moz-linear-gradient(top,  #00ffff 0%, #7db9e8 100%);
-    background: -webkit-linear-gradient(top,  #00ffff 0%,#7db9e8 100%);
-    background: linear-gradient(to bottom,  #00ffff 0%,#7db9e8 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffff', endColorstr='#7db9e8',GradientType=0 );
-
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 6em;
-    text-align: center;
-    font-weight: 800;
-}
-
-.pupperImg {
-    position: fixed;
-    width: 50%;
-    height: 60%;
-    top: 200px;
-    left: 30%;
-    z-index: -1;
-    transform: skewY(4deg);
-    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, .25);
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0000ff+0,ffff00+100 */
-    background: #0000ff; /* Old browsers */
-    background: -moz-linear-gradient(top,  #0000ff 0%, #ffff00 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #0000ff 0%,#ffff00 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #0000ff 0%,#ffff00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#ffff00',GradientType=0 ); /* IE6-9 */
-
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 6em;
-    text-align: center;
-    font-weight: 800;
-}
-
-.agioImg {
-    position: fixed;
-    width: 50%;
-    height: 60%;
-    top: 200px;
-    left: 30%;
-    z-index: -1;
-    transform: skewY(4deg);
-    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, .25);
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff0004+0,ffff00+100 */
-    background: #ff0004; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ff0004 0%, #ffff00 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #ff0004 0%,#ffff00 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #ff0004 0%,#ffff00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0004', endColorstr='#ffff00',GradientType=0 ); /* IE6-9 */
-
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 6em;
-    text-align: center;
-    font-weight: 800;
-}
-
-.ugahacksImg {
-    position: fixed;
-    width: 50%;
-    height: 60%;
-    top: 200px;
-    left: 30%;
-    z-index: -1;
-    transform: skewY(4deg);
-    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, .25);
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff00ff+0,0000ff+100 */
-    background: #ff00ff; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ff00ff 0%, #0000ff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #ff00ff 0%,#0000ff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #ff00ff 0%,#0000ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', endColorstr='#0000ff',GradientType=0 ); /* IE6-9 */
-
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 6em;
-    text-align: center;
-    font-weight: 800;
-}
-
-.cooleafImg {
-    position: fixed;
-    width: 50%;
-    height: 60%;
-    top: 200px;
-    left: 30%;
-    z-index: -1;
-    transform: skewY(4deg);
-    box-shadow: 10px 10px 20px 2px rgba(0, 0, 0, .25);
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff0004+0,0000ff+100 */
-    background: #ff0004; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ff0004 0%, #0000ff 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #ff0004 0%,#0000ff 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #ff0004 0%,#0000ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0004', endColorstr='#0000ff',GradientType=0 ); /* IE6-9 */
-
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 6em;
-    text-align: center;
-    font-weight: 800;
-}
-
-</style>
+<!-- CONTACT ICONS -->
 <div class="mediaIcons">
-<a><img src="twitter.svg"></a>
-<a><img src="linkedin.svg"></a>
-<a><img src="github.svg"></a>
-<a><img src="email.svg"></a>
-<a><img src="CV.svg" style="margin-top: 8px; margin-left: 3.5px; width: 35px"></a>
+  <a href="https://www.linkedin.com/in/paul-hwang-07496496/" target="_blank"><img src="/linkedin.svg"></a>
+  <a href="https://github.com/Ph24588" target="_blank"><img src="github.svg"></a>
+  <a href="mailto:paulhwang96@gmail.com" target="_blank"><img src="email.svg"></a>
+  <a href="PaulHwang_Resume_Blue.pdf" target="_blank"><img class="cvIcon" src="CV.svg"></a>
 </div>
 
-<div style="margin-top: 10%;" id="projects">
-<h1 id="amazon"><a>Amazon 1-Click Page</a></h1>
-<h1 id="appleMusic"><a>Apple Music Redesign</a></h1>
-<h1 id="pupper"><a>Pupper</a></h1>
-<h1 id="agio"><a>Agio</a></h1>
-<h1 id="ugahacks"><a>UGA Hacks</a></h1>
-<h1 id="cooleaf"><a>Cooleaf</a></h1>
-</div>
+<!-- PROJECTS -->
+<div id="projects">
+  <div id="uxWork">
+    <h1 id="amazon">
+      <a href="#">Amazon 1-Click Page</a>
+      <img class="arrow" id="amazonArrow" src="arrow.svg">
+    </h1>
+    <h1 id="appleMusic">
+      <a href="#">Apple Music Redesign</a>
+      <img class="arrow" id="appleArrow" src="arrow.svg">
+    </h1>
+    <h1 id="pupper">
+      <a href="/Users/user/Desktop/Ph24588.github.io/new_site/pupper.html">Pupper</a>
+      <img class="arrow" id="pupperArrow" src="arrow.svg">
+    </h1>
+    <h1 id="agio">
+      <a href="#">Agio</a>
+      <img class="arrow" id="agioArrow" src="arrow.svg">
+    </h1>
+<!--     <h1 id="ugahacks">
+      <a>UGA Hacks</a>
+      <img class="arrow" id="ugahacksArrow" src="arrow.svg">
+    </h1> -->
+    <h1 id="cooleaf">
+      <a href="#">Cooleaf</a>
+      <img class="arrow" id="cooleafArrow" src="arrow.svg">
+    </h1>
+  </div>
+    <p class="descriptionDropdown"></p>
+	<div id="visualWork" style="display: none;">
+	    <h1 id=''><a href="/ssrl">Small Satellite Research Lab</a></h1>
+	    <h1 id=''><a href="/ocean-plastics">Ocean Plastics Narrative Site</a></h1>
+	    <h1 id=''><a href="/alserkal-arrows">Alserkal Arrows</a></h1>
+	    <h1 id=''><a href="/uga-hacks">UGA Hacks</a></h1>
+	    <h1 id=''><a href="/shape-animations">Shape Animations</a></h1>
+	    <h1 id=''><a href="/astrovisual">AstroVisual</a></h1>
+	  </div>
+	</div>
 
-<!-- <img src="squareA.svg" class="square" data-tilt data-tilt-reset="false" data-tilt-glare="true" data-tilt-maxglare="1" data-tilt-perspective="1000"> -->
+  <!-- DESCRIPTIONS -->
+  <div class="descriptionContainer">
+    <div class="description">
+      <p>
+        Hover over a project to see a description <br>and
+        click on it to see the case study.
+        <br>
+        <br>
+        To view my visual work, click on
+        <br>
+        "I want to see visual work" on the side.
+      </p>
+    </div>
+    <img src="copyBorder.svg" class="copyBorder">
+  </div>
 
-<div class="amazonImg">Amazon<br>Amazon<br>Amazon<br>Amazon</div>
-<div class="appleImg">Apple<br>Apple<br>Apple<br>Apple</div>
-<div class="pupperImg">Pupper<br>Pupper<br>Pupper<br>Pupper</div>
-<div class="agioImg">Agio<br>Agio<br>Agio<br>Agio</div>
-<div class="ugahacksImg">UGA Hacks<br>UGA Hacks<br>UGA Hacks<br>UGA Hacks</div>
-<div class="cooleafImg">Cooleaf<br>Cooleaf<br>Cooleaf<br>Cooleaf</div>
+  <!-- SIDE ITEMS -->
+  <div class="about">Paul Hwang is a UX and visual<br>
+  designer that loves to create.</div>
+  <div class="switch"><a>I want to see visual work.</a></div>
 
-<div class="about">Paul Hwang is a UX and visual
-<br>
-designer that loves to create.</div>
+  <!-- BACKGROUND ANIMATION -->
+  <div id="borderImg">
+    <div id="amazonImg"></div>
+    <div id="appleImg"></div>
+    <div id="pupperImg"></div>
+    <div id="agioImg"></div>
+    <div id="ugahacksImg"></div>
+    <div id="cooleafImg"></div>
+  </div>
 
-<div class="switch"><a>I want to see visual work.</a></div>
-
-<img src="copyBorder.svg" class="copyBorder">
-
-<div class="description">
-<p>
-Hover over a project to see a description <br>and
-click on it to see the case study.  
-<br>
-<br>
-To view my visual work, click on
-<br>
-"I want to see visual work" on the side.
-</p>
-</div>
-
-<script type="text/javascript">
-
-$("#amazon").mouseenter(function() {
-  $(".description").empty().html("<p>The 1-Click Settings page was last updated almost 20 years ago. <br><br>During my time at Amazon, I was able to redesign it.</p>");
-  $(".amazonImg").fadeIn(500);
-
-  }).mouseleave(function() {
-  $(".amazonImg").fadeOut(500);
-});
-
-$("#appleMusic").mouseenter(function() {
-  $(".description").empty().html("<p>Apple Music (AM) is unique with their signature aesthetics and features, but <br>could it be better?<br><br>I decided to take a stab at it.</p>");
-  $(".appleImg").fadeIn(500);
-
-  }).mouseleave(function() {
-  $(".appleImg").fadeOut(500);
-});
-
-$("#pupper").mouseenter(function() {
-  $(".description").empty().html("<p>Pupper is a mobile based service that<br> would allow you to rent a dog for a short period of time.</p>");
-  $(".pupperImg").fadeIn(500);
-
-  }).mouseleave(function() {
-  $(".pupperImg").fadeOut(500);
-
-});
-
-$("#agio").mouseenter(function() {
-  $(".description").empty().html("<p>During the summer of 2016, a group of developers and I created a mobile app <br>that allows employees to easily use their employee discounts with fellow co-workers </p>");
-  $(".agioImg").fadeIn(500);
-
-  }).mouseleave(function() {
-  $(".agioImg").fadeOut(500);
-});
-
-$("#ugahacks").mouseenter(function() {
-  $(".description").empty().html("<p>We started UGAHacks to cultivate the <br>passion and abilities of students with the maker mentality. <br><br>As a part of this initiative, we established <br>a brand.</p>");
-  $(".ugahacksImg").fadeIn(500);
-
-  }).mouseleave(function() {
-  $(".ugahacksImg").fadeOut(500);
-});
-
-$("#cooleaf").mouseenter(function() {
-  $(".description").empty().html("<p>Cooleaf aims to increase employee engagement using their web platform. <br><br>I designed their mobile platform.</p>");
-  $(".cooleafImg").fadeIn(500);
-
-  }).mouseleave(function() {
-  $(".cooleafImg").fadeOut(500);
-});
-
-flag = true;
-
-function checkSwitch() {
-
-if (flag == true) {
-
-$(".switch").unbind().one("click", function() {
-
-  $("#projects").animate({
-    marginLeft: "+=50"
-  }, {duration: 500, queue: false})
-                .delay(500).animate({
-    marginLeft: "-=50"
-  }, {duration: 500});
-
-  $(this).fadeOut(500).fadeIn(500);
-  $("#projects").animate({
-    opacity: "0"
-  }, {duration: 500, queue: false})
-                .animate({
-    opacity: "1"
-  }, {duration: 500});
-  
-    setTimeout(function() {
-    $("#projects").empty().html("<h1 id='amazon'><a>Visual work work 1</a></h1><h1 id='appleMusic'><a>Visual work work 1</a></h1><h1 id='pupper'><a>Visual work 1</a></h1><h1 id='agio'><a>Visual work 1</a></h1><h1 id='ugahacks'><a>Visual work 1</a></h1><h1 id='cooleaf'><a>Visual work 1</a></h1>");
-    $(".switch a").empty().html("I want to see ux work.");
-    },500);
-
-  flag = false;
-});
-
-} else if (flag == false) {
-
-$(".switch").unbind().one("click", function() {
-
-  $("#projects").animate({
-    marginLeft: "+=50"
-  }, {duration: 500, queue: false})
-                .delay(500).animate({
-    marginLeft: "-=50"
-  }, {duration: 500});
-
-  $(this).fadeOut(500).fadeIn(500);
-  $("#projects").animate({
-    opacity: "0"
-  }, {duration: 500, queue: false})
-                .animate({
-    opacity: "1"
-  }, {duration: 500});
-  
-    setTimeout(function() {
-    $("#projects").empty().html("<h1 id='amazon'><a>Amazon 1-Click Page</a></h1><h1 id='appleMusic'><a>Apple Music Redesign</a></h1><h1 id='pupper'><a>Pupper</a></h1><h1 id='agio'><a>Agio</a></h1><h1 id='ugahacks'><a>UGA Hacks</a></h1><h1 id='cooleaf'><a>Cooleaf</a></h1>");
-    $(".switch a").empty().html("I want to see visual work.");
-    },500);
-
-  flag = true;
-});
-
-}};
-
-setInterval (checkSwitch, 1000);
-
-</script>
-<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="lottie.js" type="text/javascript"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
