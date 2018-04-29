@@ -1,23 +1,26 @@
-
-if (document.cookie == "true") {
-  quickSwitch();
-};
-
-function quickSwitch() {
-    $("#uxWork").hide();
-    $("#visualWork").show();
-    $(".descriptionContainer").animate({
-    opacity: "0"
-    }, {duration: 0, queue: false});
-    $(".switch a").text("I want to see ux work.");
-};
+// function quickSwitch() {
+//     $("#uxWork").hide();
+//     $("#visualWork").show();
+//     $(".descriptionContainer").animate({
+//     opacity: "0"
+//     }, {duration: 0, queue: false});
+//     $(".switch a").text("I want to see ux work.");
+// };
 
 $("#amazonImg").hide();
 $("#appleImg").hide();
 $("#pupperImg").hide();
 $("#agioImg").hide();
-$("#ugahacksImg").hide();
+$("#beatImg").hide();
 $("#cooleafImg").hide();
+
+var bga_5 = lottie.loadAnimation({
+  container: document.getElementById("beatImg"),
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'bga_5.json'
+});
 
 var bga_1 = lottie.loadAnimation({
   container: document.getElementById("amazonImg"),
@@ -51,14 +54,6 @@ var bga_4 = lottie.loadAnimation({
   path: 'bga_4.json'
 });
 
-var bga_5 = lottie.loadAnimation({
-  container: document.getElementById("ugahacksImg"),
-  renderer: 'svg',
-  loop: false,
-  autoplay: false,
-  path: 'bga_5.json'
-});
-
 var bga_6 = lottie.loadAnimation({
   container: document.getElementById("cooleafImg"),
   renderer: 'svg',
@@ -67,6 +62,13 @@ var bga_6 = lottie.loadAnimation({
   path: 'bga_6.json'
 });
 //change var name and elementId for every case study animation
+
+  document.getElementById("beatBlocks").addEventListener("mouseenter", function() {
+    bga_5.play();
+  });
+  document.getElementById("beatBlocks").addEventListener("mouseleave", function() {
+    bga_5.stop();
+  });
 
   document.getElementById("amazon").addEventListener("mouseenter", function() {
     bga_1.play();
@@ -95,13 +97,6 @@ var bga_6 = lottie.loadAnimation({
   document.getElementById("agio").addEventListener("mouseleave", function() {
     bga_4.stop();
   });
-
-  // document.getElementById("ugahacks").addEventListener("mouseenter", function() {
-  //   bga_5.play();
-  // });
-  // document.getElementById("ugahacks").addEventListener("mouseleave", function() {
-  //   bga_5.stop();
-  // });
 
     document.getElementById("cooleaf").addEventListener("mouseenter", function() {
     bga_6.play();
@@ -143,11 +138,11 @@ $("#agio").mouseenter(function() {
   $("#agioImg").hide();
 });
 
-$("#ugahacks").mouseenter(function() {
-  $(".description").empty().html("<p>We started UGAHacks to cultivate the <br>passion and abilities of students with the maker mentality. <br><br>As a part of this initiative, we established <br>a brand.</p>");
-  $("#ugahacksImg").show();
+$("#beatBlocks").mouseenter(function() {
+  $(".description").empty().html("<p>Beat Blocks was my capstone project<br>that used computer vision to bring people<br>together by having them create music<br>with each other.</p>");
+  $("#beatImg").show();
 }).mouseleave(function() {
-  $("#ugahacksImg").hide();
+  $("#beatImg").hide();
 });
 
 $("#cooleaf").mouseenter(function() {
@@ -157,6 +152,22 @@ $("#cooleaf").mouseenter(function() {
   $("#cooleafImg").hide();
 });
 //copy and paste a new one and change the IDs and stuff
+
+if (window.location.hash == '#visual') {
+  $("#uxWork").hide();
+  $("#visualWork").show();
+  $(".descriptionContainer").animate({
+  opacity: "0"
+  }, {duration: 0, queue: false});
+  $(".switch a").text("I want to see ux work.");
+} else if (window.location.hash == '#ux') {
+  $("#visualWork").hide();
+  $("#uxWork").show();
+  $(".descriptionContainer").animate({
+  opacity: "1"
+  }, {duration: 0, queue: false});
+  $(".switch a").text("I want to see visual work.");
+};
 
 flag = true;
 
@@ -185,19 +196,14 @@ $(".switch").unbind().one("click", function() {
     opacity: "0"
   }, {duration: 500, queue: false});
 
-  // document.querySelector(".descriptionContainer").style.display = "none";
-
     setTimeout(function() {
     $("#uxWork").hide();
     $("#visualWork").show();
     $(".switch a").text("I want to see ux work.");
+    $(".switch a").attr("href", "#ux");
     },500);
 
   flag = false;
-
-  document.cookie = "true";
-
-  // alert(document.cookie);
 });
 
 } else if (flag == false) {
@@ -227,11 +233,10 @@ $(".switch").unbind().one("click", function() {
     $("#uxWork").show();
     $("#visualWork").hide();
     $(".switch a").text("I want to see visual work.");
+    $(".switch a").attr("href", "#visual");
     },500);
 
   flag = true;
-
-  document.cookie = "false";
 });
 
 }};

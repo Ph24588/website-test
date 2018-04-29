@@ -17,6 +17,10 @@ app.get('/', function(req, res) {
 });
 
 // UX PROJECTS
+// Pupper
+app.get('/beat-blocks', function(req, res) {
+    res.render('pages/beat-blocks');
+});
 // Amazon
 app.get('/amazon', function(req, res) {
     res.render('pages/amazon');

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/visual.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <body>
-<a class="back" href="/"> Back </a>
+<a class="back" href="/#visual"> Back </a>
 <div class="overflow"></div>
 <div class="content">
 	<h1>UGA Hacks Branding</h1>
@@ -38,6 +38,17 @@
 	<h2>This is cool stuff</h2>
 </div>
 <img src="gradient.svg" class="background">
-
+<!--  <script>
+ $(".back").click(function() {
+ 	if (window.location.hash == '#visual') {
+ 		$("#uxWork").hide();
+		$("#visualWork").show();
+		$(".descriptionContainer").animate({
+		opacity: "0"
+		}, {duration: 0, queue: false});
+		$(".switch a").text("I want to see ux work.");
+ 	}
+});
+ </script> -->
 </body>
 </html>

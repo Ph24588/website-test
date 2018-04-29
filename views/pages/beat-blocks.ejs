@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Pupper</title>
+	<title>Beat blocks</title>
 	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -17,10 +17,18 @@
 	font-family: 'Nunito Sans', sans-serif;
 }
 
+/*Add #wrapper to template*/
+#wrapper {
+	position: relative;
+	margin: auto;
+	max-width: 1440px;
+}
+
+/*Add body to template*/
 body {
-	margin:0;
+	margin: auto !important;
 	overflow-x: hidden;
-/*	max-width: 1440px;*/
+	max-width: 1440px !important;
 }
 
 h1 {
@@ -41,6 +49,7 @@ h2 {
 a {
 	text-decoration: none;
 	cursor: pointer;
+  	color: blue;
 }
 
 .back {
@@ -90,6 +99,7 @@ a {
 	opacity: 0;
 	margin-bottom: -325px;
 	margin-top: -175px;
+	box-shadow: 2px 3px 10px black;
 }
 
 .background {
@@ -176,7 +186,7 @@ a {
 }
 
 .wideContainer {
-	top: 4450px;
+	top: 4500px;
 	width: 100%;
 	height: 500px;
     overflow-x: scroll;
@@ -192,6 +202,7 @@ a {
 	height: auto;
 	position: relative;
 	display: inline-block;
+	box-shadow: 2px 3px 10px black;
 }
 
 .wideContainer::-webkit-scrollbar { 
@@ -280,6 +291,38 @@ a {
 	margin-top: 50px;
 }
 
+/*Add new queries to template*/
+@media (max-width: 10000px) and (min-width: 2561px) {
+	.copyBContainer {
+		position: absolute;
+		top: 815px;
+	}
+}
+
+@media (max-width: 2560px) {
+	.copyBContainer {
+		margin-left: 22%;
+	}
+}
+
+@media (max-width: 2300px) {
+	.copyBContainer {
+		margin-left: 17%;
+	}
+}
+
+@media (max-width: 1900px) {
+	.copyBContainer {
+		margin-left: 10%;
+	}
+}
+
+@media (max-width: 1600px) {
+	.copyBContainer {
+		margin-left: 4%;
+	}
+}
+
 @media (max-width: 1270px) {
 	.background{
 		width: 1300px;
@@ -287,6 +330,10 @@ a {
 
 	.wireframe {
 		width: 450px;
+	}
+
+	.copyBContainer {
+		margin-left: 0;
 	}
 }
 
@@ -340,6 +387,22 @@ a {
 	}
 }
 
+/*MQ for this layout only*/
+@media (max-width: 882px) {
+
+	#bg_2 {
+		top: 4500px;
+	}
+
+	.wideContainer {
+		top: 4750px;
+	}
+
+	.copyDContainer {
+		top: 5190px;
+	}
+}
+
 @media (max-width: 799px) {
 	#bg_1 {
 		width: 1550px;
@@ -359,15 +422,15 @@ a {
 	}
 
 	#bg_2 {
-		top: 4500px;
+		top: 4700px;
 	}
 
 	.wideContainer {
-		top: 4750px;
+		top: 4950px;
 	}
 
 	.copyDContainer {
-		top: 5190px;
+		top: 5390px;
 	}
 }
 
@@ -423,69 +486,75 @@ a {
 	}
 }
 </style>
-		<div class="lightBox">
-			<div class="x">&#10005</div>
-			<div class="prototype">
-			<iframe class="mobilePrototype" src="https://marvelapp.com/10hhbb8?emb=1&iosapp=false&frameless=false" width="452" height="902" allowTransparency="true" frameborder="0"></iframe>
-		</div>
-		</div>
-		<img class="background" src="gradient.svg" id="bg_1">
-		<a class="back" href="/#ux"><img src="home.svg"></a>
-		<h1>Pupper</h1>
-		<p class="copyA">Have you ever wanted a dog, but without the responsibility of owning one? What if there was an app that let you rent one for a weekend, or even for an event? Pupper is an iOS application that allows you to do just that.</p>
-		<img class="mockup" id="mockup_1" src="screenTest.png">
-		<img class="mockup" id="mockup_2" src="screenTest.png">
-		<img class="mockup" id="mockup_3" src="screenTest.png">
-		<div class="researchContainer">
-			<img class="research" id="research_1" src="test.jpg">
-			<img class="research" id="research_2" src="test.jpg">
-			<img class="research" id="research_3" src="test.jpg">
-		</div>
-		<div class="copyBContainer">
-			<h2>Research</h2>
-			<p class="copyB" id="copyB_left">This app concept was created in a UX class taught by Matt Smith from MDS. This service focuses on delivering live animals to strangers that will play and take care of them for a short period of time. Usually I would begin by stating objective, scope, and use cases, but accident prevention would be a high priority, so I stated my edge cases first. </p>
-			<p class="copyB">The goal was for users to be able to rent a dog for a short period of time, whether it be for an event like a birthday party, or just a casual jog. I wrote personas for common scenarios and use cases for renting different types of dogs. Of course, safety for both parties was a focus as well. These dogs needed to be presented like they were living beings, not objects.</p>
-		</div>
-		<div class="largeWireframeContainer">
-			<h2 style="color:black; margin-left: 0;">Wireframing</h2>
-			<div class="wireframeContainer">
-				<img class="wireframe" id="wireframe_1" src="test.jpg">
-				<p class="copyC">With my groundwork done, I started sketching out solutions for the dog rentals. Each dog has a few details: the name, breed, cost, description, and three key characteristics: age group, activity level, and temperament.</p>
-				<p class="copyC">The filtering system is based off of these characteristics. I highly emphasized the name and the personality of each dog to further “humanize” each dog as to remind the user that these are live animals.</p>
+		<div id="wrapper">
+			<div class="lightBox">
+				<div class="x">&#10005</div>
+				<div class="prototype">
+				<!-- Get web prototype done from AJ -->
+					<iframe class="mobilePrototype" src="https://marvelapp.com/10hhbb8?emb=1&iosapp=false&frameless=false" width="452" height="902" allowTransparency="true" frameborder="0"></iframe>
+				</div>
 			</div>
-
-			<div class="wireframeContainer">
-				<img class="wireframe" id="wireframe_2" src="test.jpg">
-				<p class="copyC">To easily display this information, I went with a cell view for bite-sized entries.</p>
-				<p class="copyC">The details page included the dog’s information, a date picker, and the “add to kennel” button.</p>
+			<img class="background" src="gradient.svg" id="bg_1">
+			<a class="back" href="/#ux"><img src="home.svg"></a>
+			<h1>Beat blocks</h1>
+			<p class="copyA">My capstone project prompted us to solve a local problem at UGA. Our campus has a lack of emphasis on technology, being a liberal arts school. My team and I used our expertise to engage students with technology to see it's potential for bringing people together.</p>
+			<img class="mockup" id="mockup_3" src="beatblocks/table-top-2.png">
+			<div class="researchContainer">
+				<img class="research" id="research_1" src="beatblocks/ui-sketch.png">
+				<img class="research" id="research_2" src="beatblocks/table-sketch.png">
+				<img class="research" id="research_3" src="beatblocks/paper-blocks.png">
 			</div>
-
-			<div class="wireframeContainer">
-				<img class="wireframe" id="wireframe_3" src="test.jpg">
-				<p class="copyC">To maintain a simple and intuitive interface, I used typography and white space to properly group the necessary information together to create hierarchy.</p>
+			<div class="copyBContainer">
+				<h2>Research</h2>
+				<p class="copyB" id="copyB_left">Beat blocks is a physical interface where people come together to create music together. To prepare for the project, I wrote a brief, created a project timeline with goals and milestones, and planned a budget. I also assembled a team, consisting of AJ, the back–end dev, and Oscar, the front–end dev.</p>
+				<p class="copyB">When doing research, I found a few projects that made good influences. These were Incredibox and the Chrome Music Lab. These apps allow anyone to create music without knowledge of music theory, much like our project. It guided the project in numerous aspects.</p>
 			</div>
+			<div class="largeWireframeContainer">
+				<h2 style="color:black; margin-left: 0;">Iterating</h2>
+				<div class="wireframeContainer">
+			<!-- Add sketces of other parts here -->
+					<img class="wireframe" id="wireframe_1" src="beatblocks/wood-blocks.png">
+					<p class="copyC">This project has many parts: visual design, sound design, programming, woodwork, and the exhibition. For this case study, I'm focusing on the UI/UX aspects. For a more comprehensive overview, <a href="https://issuu.com/paulhwang/docs/beat_blocks_progress_book" target="_blank">check out my process book.</a></p>
+					<p class="copyC">We needed an interface that allowed creative musical expression for people that didn't know anything about music theory. We also needed to keep in mind that our design needed to encourage people to have this experience with others.</p>
+				</div>
+			
+				<div class="wireframeContainer">
+					<img class="wireframe" id="wireframe_2" src="beatblocks/colored-blocks.png">
+					<p class="copyC">We decided to have users assemble loops with preset sound patterns. For this idea, users would need to place blocks into a music player. We planned to make a touchscreen and have users drag and drop sounds into the center, but after pivoting, we decided to have a physical UI instead.</p>
+					<p class="copyC">We had physical blocks that had a shape and color combination. This combination would be seen by a camera, which would use computer vision to decide was sounds to play.</p>
+				</div>
+			
+				<div class="wireframeContainer">
+					<img class="wireframe" id="wireframe_3" src="beatblocks/final-ui.png">
+					<p class="copyC">Our front–end was displayed onto the acrylic table top, from underneath, by a projector. It indicated what color made certain kinds of sounds as well as show how many people could use our table. It also indicated when people could place in a block with a blinking glow in the center.</p>
+				</div>
+			</div>
+			<img class="background" src="gradient2.svg" id="bg_2">
+			<div class="wideContainer">
+			<div style="width: 150px; height: 100px; float: left;"></div>
+			<!-- Add pictures of table, components, and people using it here -->
+				    	<img class="finalMockup" id="finalMockup_1" style="margin-right: 50px;" src="beatblocks/table-top.png">
+				    	<img class="finalMockup" id="finalMockup_2" style="margin-right: 50px;" src="beatblocks/table-front.png">
+				    	<img class="finalMockup" id="finalMockup_3" style="margin-right: 50px;" src="beatblocks/pink-blocks.png">
+				    	<img class="finalMockup" id="finalMockup_4" style="margin-right: 50px;" src="beatblocks/people-1.png">
+				    	<img class="finalMockup" id="finalMockup_5" style="margin-right: 50px;" src="beatblocks/people-2.png">
+				    </div>
+				    <div class="copyDContainer">
+				<h2 style="margin-left: 0;">Exhibition</h2>
+				    	<p class="copyD">Visually, we had everything follow our color palette, which was influenced by the synth focused sounds designed for the project, including our poster and blocks. The colors used also had to contrast enough so the camera could better discern the blocks.</p>
+			
+				<p class="copyD">To get people to work together, we had originally planned to add sensors to the edges of the table that would allow a type of sound, say melodies, play if it was covered. If you didn’t have 4 people, you couldn’t play all of the sounds. </p>
+			
+				<p class="copyD"">We ended up not implementing this due to time constraints. However, due to how we designed our other components, people naturally played together.</p>
+			
+				<a class="button" id="over400">
+					<div class="buttonText">View prototype</div>
+				</a>
+				<a class="button" id="under400" href="https://marvelapp.com/10hhbb8" target="_blank">
+					<div class="buttonText">View prototype</div>
+				</a>
+				    </div>
 		</div>
-		<img class="background" src="gradient2.svg" id="bg_2">
-		<div class="wideContainer">
-		<div style="width: 150px; height: 100px; float: left;"></div>
-	    	<img class="finalMockup" id="finalMockup_1" src="screenTest.png">
-	    	<img class="finalMockup" id="finalMockup_2" src="screenTest.png">
-	    	<img class="finalMockup" id="finalMockup_3" src="screenTest.png">
-	    	<img class="finalMockup" id="finalMockup_4" src="screenTest.png">
-	    	<img class="finalMockup" id="finalMockup_5" src="screenTest.png">
-	    </div>
-	    <div class="copyDContainer">
-			<h2 style="margin-left: 0;">Mockups</h2>
-	    	<p class="copyD">The message I wanted to give with my art direction was that every dog was going to be a new adventure. That with your new friend, you could embark (pun intended) on a journey. To do this, I went with a “granola”, wanderlust aesthetic that would appeal to a younger audience.</p>
-			<p class="copyD"> I also made sure that each dog looked just as excited as a user might be renting the dog. I wanted to emphasize imagery, white space, and typography throughout the UI.</p>
-			<p class="copyD"">There were a few questions I couldn’t find a good answer to throughout the project, like how one could properly put a price on a dog and where the dogs would be rented from. Ideally they would come from shelters, but they would need to be trained specifically to be rented out.</p>
-			<a class="button" id="over400">
-				<div class="buttonText">View prototype</div>
-			</a>
-			<a class="button" id="under400" href="https://marvelapp.com/10hhbb8" target="_blank">
-				<div class="buttonText">View prototype</div>
-			</a>
-	    </div>
 		<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -553,7 +622,6 @@ $(document).scroll(function(){
 		$("#mockup_3").css("margin-top", -125 + scrollValue/11.8);
 	};
  	
-// console.log(scrollValue);
 
 	if (scrollValue > 300 && scrollValue < 1500) {
 		$(".copyBContainer").fadeIn(500);
@@ -564,9 +632,4 @@ $(document).scroll(function(){
 
 </script>
 </body>
-<!-- Skrollr -->
-<!--   <script type="text/javascript" src="skrollr.js"></script>
-  <script type="text/javascript">
-  var s = skrollr.init();
-  </script> -->
 </html>
