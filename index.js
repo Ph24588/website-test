@@ -3,6 +3,16 @@
 var express = require('express');
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -68,5 +78,5 @@ app.get('/astrovisual', function(req, res) {
     res.render('pages/astrovisual');
 });
 
-app.listen(5000);
+// app.listen(5000);
 console.log('5000 is the magic port');
