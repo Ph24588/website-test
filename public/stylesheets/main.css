@@ -187,6 +187,10 @@ p {
   display: none;
 }
 
+.arrow.active {
+  transform: rotateZ(180deg);
+}
+
 #amazonArrow {
   top: 95px;
   left: 165px;

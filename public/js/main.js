@@ -106,51 +106,76 @@ var bga_6 = lottie.loadAnimation({
   });
 //add play and stop for every case study animation
 
-$("#amazon").mouseenter(function() {
-  $(".description").empty().html("<p>The 1-Click Settings page was last updated almost 20 years ago. <br><br>During my time at Amazon, I was able to redesign it.</p>");
-  $("#amazonImg").show();
-}).click(function() {
-    $(".descriptionDropdown").empty().html("<p>The 1-Click Settings page was last updated almost 20 years ago. <br><br>During my time at Amazon, I was able to redesign it.</p>");
-}).mouseleave(function() {
-  $("#amazonImg").hide();
+const projects = [
+  {
+    "el": $("#amazon"),
+    "img": $("#amazonImg"),
+    "type": "UX",
+    "cardText":    "<p>The 1-Click Settings page was last updated almost 20 years ago. <br><br>During my time at Amazon, I was able to redesign it.</p>",
+    "popoverText": "<p>The 1-Click Settings page was last updated almost 20 years ago. <br><br>During my time at Amazon, I was able to redesign it.</p>"
+  },
+  {
+    "el": $("#appleMusic"),
+    "img": $("#appleImg"),
+    "type": "UX",
+    "cardText":    "<p>Apple Music (AM) is unique with their signature aesthetics and features, but <br>could it be better?<br><br>I decided to take a stab at it.</p>",
+    "popoverText": "<p>Apple Music (AM) is unique with their signature aesthetics and features, but <br>could it be better?<br><br>I decided to take a stab at it.</p>"
+  },
+  {
+    "el": $("#pupper"),
+    "img": $("#pupperImg"),
+    "type": "UX",
+    "cardText":    "<p>Pupper is a mobile based service that<br> would allow you to rent a dog for a short period of time.</p>",
+    "popoverText": "<p>Have you ever wanted a dog, but without the responsibility of owning one? What if there was an app that let you rent one for a weekend, or even for an event? Pupper is an iOS application that allows you to do just that.</p>"
+  },
+  {
+    "el": $("#agio"),
+    "img": $("#agioImg"),
+    "type": "UX",
+    "cardText":    "<p>During the summer of 2016, a group of developers and I created a mobile app <br>that allows employees to easily use their employee discounts with fellow co-workers.</p>",
+    "popoverText": "<p>Large companies typically offer an abundance of perks to their employees, but sometimes they’re scattered all over the place, making them hard to find and use. Our team created an app that allows employees to easily access all discounts and invite coworkers out to lunch.</p>"
+  },
+  {
+    "el": $("#beatBlocks"),
+    "img": $("#beatImg"),
+    "type": "UX",
+    "cardText":    "<p>Beat Blocks was my capstone project<br>that used computer vision to bring people<br>together by having them create music<br>with each other.</p>",
+    "popoverText": "<p>Beat Blocks was my capstone project<br>that used computer vision to bring people<br>together by having them create music<br>with each other.</p>"
+  },
+  {
+    "el": $("#cooleaf"),
+    "img": $("#cooleafImg"),
+    "type": "UX",
+    "cardText":    "<p>Cooleaf aims to increase employee engagement using their web platform. <br><br>I designed their mobile platform.</p>",
+    "popoverText": "<p>Cooleaf aims to increase employee engagement using their web platform. <br><br>I designed their mobile platform.</p>"
+  }
+].forEach(({el, img, cardText, popoverText}) => {
+  el.mouseenter(function() {
+    $(".description").html(cardText);
+    img.show();
+  });
+
+  el.click(function() {
+    $(".descriptionDropdown").html(popoverText);
+  });
+  
+  el.mouseleave(function() {
+    img.hide();
+  }); 
 });
 
-$("#appleMusic").mouseenter(function() {
-  $(".description").empty().html("<p>Apple Music (AM) is unique with their signature aesthetics and features, but <br>could it be better?<br><br>I decided to take a stab at it.</p>");
-  $("#appleImg").show();
-}).click(function() {
-    $(".descriptionDropdown").empty().html("<p>Apple Music (AM) is unique with their signature aesthetics and features, but <br>could it be better?<br><br>I decided to take a stab at it.</p>");
-}).mouseleave(function() {
-  $("#appleImg").hide();
-});
 
-$("#pupper").mouseenter(function() {
-  $(".description").empty().html("<p>Pupper is a mobile based service that<br> would allow you to rent a dog for a short period of time.</p>");
-  $("#pupperImg").show();
-}).mouseleave(function() {
-  $("#pupperImg").hide();
-});
 
-$("#agio").mouseenter(function() {
-  $(".description").empty().html("<p>During the summer of 2016, a group of developers and I created a mobile app <br>that allows employees to easily use their employee discounts with fellow co-workers.</p>");
-  $("#agioImg").show();
-}).mouseleave(function() {
-  $("#agioImg").hide();
-});
 
-$("#beatBlocks").mouseenter(function() {
-  $(".description").empty().html("<p>Beat Blocks was my capstone project<br>that used computer vision to bring people<br>together by having them create music<br>with each other.</p>");
-  $("#beatImg").show();
-}).mouseleave(function() {
-  $("#beatImg").hide();
-});
 
-$("#cooleaf").mouseenter(function() {
-  $(".description").empty().html("<p>Cooleaf aims to increase employee engagement using their web platform. <br><br>I designed their mobile platform.</p>");
-  $("#cooleafImg").show();
-}).mouseleave(function() {
-  $("#cooleafImg").hide();
-});
+
+
+
+
+
+
+
+
 //copy and paste a new one and change the IDs and stuff
 
 if (window.location.hash == '#visual') {
@@ -243,20 +268,18 @@ $(".switch").unbind().one("click", function() {
 
 setInterval (checkSwitch, 1000);
 
-var i = 0;
-
 $(".arrow").click(function(e) {
-  if (i % 2 === 0) {
-      $(this).css("transform","rotateZ(180deg)")
+  const isActive = $(this).hasClass("active");
+  
+  $(this).toggleClass("active");
+  $(".arrow").not(this).removeClass("active");
+  if (isActive) {
+      $(".descriptionDropdown").fadeOut(500);
+  } else {
       $(".descriptionDropdown").fadeIn(500);
       $(".descriptionDropdown").css({
-        left:e.pageX - 220,
-        top:e.pageY + 80
-        });
-      i++
-  } else {
-      $(this).css("transform","rotateZ(0deg)")
-      $(".descriptionDropdown").fadeOut(500);
-      i++
+        left: e.pageX - 220,
+        top: e.pageY + 80
+      });
   };
 });
