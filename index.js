@@ -29,53 +29,53 @@ app.get('/', function(req, res) {
 // UX PROJECTS
 // Pupper
 app.get('/beat-blocks', function(req, res) {
-    res.render('pages/beat-blocks');
+    res.render('pages/ux/beat-blocks');
 });
 // Amazon
 app.get('/amazon', function(req, res) {
-    res.render('pages/amazon');
+    res.render('pages/ux/amazon');
 });
 // Apple Music
 app.get('/apple-music', function(req, res) {
-    res.render('pages/apple-music');
+    res.render('pages/ux/apple-music');
 });
 // Pupper
 app.get('/pupper', function(req, res) {
-    res.render('pages/pupper');
+    res.render('pages/ux/pupper');
 });
 // Agio
 app.get('/agio', function(req, res) {
-    res.render('pages/agio');
+    res.render('pages/ux/agio');
 });
 // Cooleaf
 app.get('/cooleaf', function(req, res) {
-    res.render('pages/cooleaf');
+    res.render('pages/ux/cooleaf');
 });
 
 // VISUAL PROJECTS
 // SSRL
 app.get('/ssrl', function(req, res) {
-    res.render('pages/ssrl');
+    res.render('pages/visual/ssrl');
 });
 // Ocean Plastics
 app.get('/ocean-plastics', function(req, res) {
-    res.render('pages/ocean-plastics');
+    res.render('pages/visual/ocean-plastics');
 });
 // Alserkal Arrows
 app.get('/alserkal-arrows', function(req, res) {
-    res.render('pages/alserkal-arrows');
+    res.render('pages/visual/alserkal-arrows');
 });
 // UGA Hacks
 app.get('/uga-hacks', function(req, res) {
-    res.render('pages/uga-hacks');
+    res.render('pages/visual/uga-hacks');
 });
 // Shape Animations
 app.get('/shape-animations', function(req, res) {
-    res.render('pages/shape-animations');
+    res.render('pages/visual/shape-animations');
 });
 // AstroVisual
 app.get('/astrovisual', function(req, res) {
-    res.render('pages/astrovisual');
+    res.render('pages/visual/astrovisual');
 });
 
 app.listen(5000);

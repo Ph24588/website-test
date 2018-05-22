@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Beat blocks</title>
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
+	<title>Beat Blocks</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
 <body>
 
 <style>
@@ -489,7 +486,7 @@ a {
 		<div id="wrapper">
 			<div class="lightBox">
 				<div class="x">&#10005</div>
-				<div class="prototype">
+				<div class="prototype">	
 				<!-- Get web prototype done from AJ -->
 					<iframe class="mobilePrototype" src="https://marvelapp.com/10hhbb8?emb=1&iosapp=false&frameless=false" width="452" height="902" allowTransparency="true" frameborder="0"></iframe>
 				</div>
@@ -531,19 +528,19 @@ a {
 			<img class="background" src="gradient2.svg" id="bg_2">
 			<div class="wideContainer">
 			<div style="width: 150px; height: 100px; float: left;"></div>
-				    	<img class="finalMockup" id="finalMockup_1" style="margin-right: 50px;" src="beatblocks/table-top.png">
-				    	<img class="finalMockup" id="finalMockup_2" style="margin-right: 50px;" src="beatblocks/table-front.png">
-				    	<img class="finalMockup" id="finalMockup_3" style="margin-right: 50px;" src="beatblocks/pink-blocks.png">
-				    	<img class="finalMockup" id="finalMockup_4" style="margin-right: 50px;" src="beatblocks/people-1.png">
-				    	<img class="finalMockup" id="finalMockup_5" style="margin-right: 50px;" src="beatblocks/people-2.png">
-				    </div>
-				    <div class="copyDContainer">
+				<img class="finalMockup" id="finalMockup_1" style="margin-right: 50px;" src="beatblocks/table-top.png">
+				<img class="finalMockup" id="finalMockup_2" style="margin-right: 50px;" src="beatblocks/table-front.png">
+				<img class="finalMockup" id="finalMockup_3" style="margin-right: 50px;" src="beatblocks/pink-blocks.png">
+				<img class="finalMockup" id="finalMockup_4" style="margin-right: 50px;" src="beatblocks/people-1.png">
+				<img class="finalMockup" id="finalMockup_5" style="margin-right: 50px;" src="beatblocks/people-2.png">
+		    </div>
+		    <div class="copyDContainer">
 				<h2 style="margin-left: 0;">Exhibition</h2>
-				    	<p class="copyD">Visually, we had everything follow our color palette, which was influenced by the synth focused sounds designed for the project, including our poster and blocks. The colors used also had to contrast enough so the camera could better discern the blocks.</p>
+		    	<p class="copyD">Visually, we had everything follow our color palette, which was influenced by the synth focused sounds designed for the project, including our poster and blocks. The colors used also had to contrast enough so the camera could better discern the blocks.</p>
 			
 				<p class="copyD">To get people to work together, we had originally planned to add sensors to the edges of the table that would allow a type of sound, say melodies, play if it was covered. If you didn’t have 4 people, you couldn’t play all of the sounds. </p>
 			
-				<p class="copyD"">We ended up not implementing this due to time constraints. However, due to how we designed our other components, people naturally played together.</p>
+				<p class="copyD">We ended up not implementing this due to time constraints. However, due to how we designed our other components, people naturally played together.</p>
 			
 				<a class="button" style="display: none;" id="over400">
 					<div class="buttonText">View prototype</div>
@@ -551,36 +548,23 @@ a {
 				<a class="button" style="display: none;" id="under400" href="https://marvelapp.com/10hhbb8" target="_blank">
 					<div class="buttonText">View prototype</div>
 				</a>
-				    </div>
+		    </div>
 		</div>
-		<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
+
 <script type="text/javascript">
+	$(".lightBox").hide();
+	$(".button").hide();
 
-$(".lightBox").hide();
-$(".button").hide();
+	$("#over400").click(function(){
+		$(".lightBox").fadeIn();
+		$("body").css('overflow','hidden');
+	});
 
-$("#over400").click(function(){
-	$(".lightBox").fadeIn();
-	$("body").css('overflow','hidden');
-});
+	$(".lightBox").click(function() {
+		$(this).fadeOut();
+		$("body").removeAttr('style');
+	});
 
-$(".lightBox").click(function() {
-	$(this).fadeOut();
-	$("body").removeAttr('style');
-});
-
-if ($(window).width() < 400) {
-	$("#over400").hide();
-	$("#under400").show();
-} else {
-	$("#under400").hide();
-	$("#over400").show();
-}
-
-$(window).on('resize', function(){
 	if ($(window).width() < 400) {
 		$("#over400").hide();
 		$("#under400").show();
@@ -588,46 +572,54 @@ $(window).on('resize', function(){
 		$("#under400").hide();
 		$("#over400").show();
 	}
-});
 
-  $("#mockup_1").animate({
-    marginTop: "+=50",
-    opacity: "1"
-  }, 500);
+	$(window).on('resize', function(){
+		if ($(window).width() < 400) {
+			$("#over400").hide();
+			$("#under400").show();
+		} else {
+			$("#under400").hide();
+			$("#over400").show();
+		}
+	});
 
-    $("#mockup_2").delay(100).animate({
-    marginTop: "+=50",
-    opacity: "1"
-  }, 500);
+	  $("#mockup_1").animate({
+	    marginTop: "+=50",
+	    opacity: "1"
+	  }, 500);
 
-      $("#mockup_3").delay(200).animate({
-    marginTop: "+=50",
-    opacity: "1"
-  }, 500);
+	    $("#mockup_2").delay(100).animate({
+	    marginTop: "+=50",
+	    opacity: "1"
+	  }, 500);
 
-var scrollValue;
-$(".copyBContainer").hide();
+	      $("#mockup_3").delay(200).animate({
+	    marginTop: "+=50",
+	    opacity: "1"
+	  }, 500);
 
-if ($(window).width() < 985) {
-	$(".copyBContainer").show();
-}
+	var scrollValue;
+	$(".copyBContainer").hide();
 
-$(document).scroll(function(){
-	scrollValue = $(document).scrollTop();
-	if (scrollValue < 400) {
-		$("#mockup_1").css("margin-top", -125 + scrollValue/12);
-		$("#mockup_2").css("margin-top", -125 + scrollValue/11.9);
-		$("#mockup_3").css("margin-top", -125 + scrollValue/11.8);
-	};
- 	
+	if ($(window).width() < 985) {
+		$(".copyBContainer").show();
+	}
 
-	if (scrollValue > 300 && scrollValue < 1500) {
-		$(".copyBContainer").fadeIn(500);
-	} else if (scrollValue > 1900 && $(window).width() > 985 || scrollValue < 300 && $(window).width() > 985) {
-		$(".copyBContainer").fadeOut(500);
-	};
-});
+	$(document).scroll(function(){
+		scrollValue = $(document).scrollTop();
+		if (scrollValue < 400) {
+			$("#mockup_1").css("margin-top", -125 + scrollValue/12);
+			$("#mockup_2").css("margin-top", -125 + scrollValue/11.9);
+			$("#mockup_3").css("margin-top", -125 + scrollValue/11.8);
+		};
+	 	
 
+		if (scrollValue > 300 && scrollValue < 1500) {
+			$(".copyBContainer").fadeIn(500);
+		} else if (scrollValue > 1900 && $(window).width() > 985 || scrollValue < 300 && $(window).width() > 985) {
+			$(".copyBContainer").fadeOut(500);
+		};
+	});
 </script>
 </body>
 </html>
