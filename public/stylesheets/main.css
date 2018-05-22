@@ -173,6 +173,7 @@ p {
   height: 100%;
   opacity: .7;
   transform: scale(1.4,1.4);
+  display: none;
 }
 
 #projects {
