@@ -27,9 +27,13 @@ app.get('/', function(req, res) {
 });
 
 // UX PROJECTS
-// Pupper
+// Beatblocks
 app.get('/beat-blocks', function(req, res) {
     res.render('pages/ux/beat-blocks');
+});
+
+app.get('/beat-blocks/prototype', function(req, res) {
+    res.render('pages/ux/beat-blocks-prototype');
 });
 // Amazon
 app.get('/amazon', function(req, res) {
