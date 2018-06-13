@@ -2,6 +2,12 @@
 	font-family: 'Nunito Sans', sans-serif;
 }
 
+#wrapper {
+	position: relative;
+	margin: auto;
+	max-width: 1440px;
+}
+
 body {
 	margin:0;
 	overflow-x: hidden;
@@ -263,6 +269,14 @@ a {
 	float: right;
 	margin-right: 35px;
 	margin-top: 50px;
+}
+
+
+@media (min-width: 1440px) {
+	.copyBContainer {
+		left: unset;
+		right: calc((100vw - 720px)/2 - 150px);
+	}
 }
 
 @media (max-width: 1270px) {
