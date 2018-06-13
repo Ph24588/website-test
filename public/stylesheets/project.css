@@ -407,3 +407,7 @@ a {
 		width: 93%;
 	}
 }
+
+.images img {
+	margin-bottom: 25px;
+}
