@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Beatblocks Prototype</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<style type="text/css">
 		#bb-table {
 			display: block;
@@ -16,8 +17,9 @@
 			left: 25%;
 			bottom: 25%;
 			background: #FFF;
+			opacity: 0.8;
 			border-radius: 100%;
-			border: 1px dashed black;
+			border: 5px dotted #c0c0c0;
 
 			display: flex;
 			justify-content: center;
@@ -26,7 +28,9 @@
 		}
 
 		#bb-table-center:after {
-			content: "Drop blocks here!";
+			content: "Drop your blocks here to play them!";
+			font-family: Roboto;
+			font-size: 1.5em;
 		}
 
 		#left {
@@ -66,7 +70,6 @@
 		}
 
 		#bb-table .shape {
-			/*position: absolute;*/
 			width: 200px;
 			height: 60px;
 
@@ -77,6 +80,19 @@
 			text-align: center;
 
 			margin: 10px;
+		}
+
+		.shape {
+		    cursor: move;
+		    cursor: grab;
+		    cursor: -moz-grab;
+		    cursor: -webkit-grab;
+		}
+
+		.shape:active { 
+		    cursor: grabbing;
+		    cursor: -moz-grabbing;
+		    cursor: -webkit-grabbing;
 		}
 
 		#bb-table div:after {
@@ -135,355 +151,8 @@
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.js"></script>
-	<script>
-
-		var pads1 = new Howl({
-		  src: ['/beatblocks/assets/sounds/pads 1.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var pads2 = new Howl({
-		  src: ['/beatblocks/assets/sounds/pads 2.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var pads3 = new Howl({
-		  src: ['/beatblocks/assets/sounds/pads 3.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var pads4 = new Howl({
-		  src: ['/beatblocks/assets/sounds/pads 4.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var arp1 = new Howl({
-		  src: ['/beatblocks/assets/sounds/arp 1.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var arp2 = new Howl({
-		  src: ['/beatblocks/assets/sounds/arp 2.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var arp3 = new Howl({
-		  src: ['/beatblocks/assets/sounds/arp 3.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var arp4 = new Howl({
-		  src: ['/beatblocks/assets/sounds/arp 4.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var melody1 = new Howl({
-		  src: ['/beatblocks/assets/sounds/melody 1.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var melody2 = new Howl({
-		  src: ['/beatblocks/assets/sounds/melody 2.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var melody3 = new Howl({
-		  src: ['/beatblocks/assets/sounds/melody 3.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var melody4 = new Howl({
-		  src: ['/beatblocks/assets/sounds/melody 4.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var perc1 = new Howl({
-		  src: ['/beatblocks/assets/sounds/perc 1.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var perc2 = new Howl({
-		  src: ['/beatblocks/assets/sounds/perc 2.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var perc3 = new Howl({
-		  src: ['/beatblocks/assets/sounds/perc 3.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		var perc4 = new Howl({
-		  src: ['/beatblocks/assets/sounds/perc 4.ogg'],
-		  autoplay: true,
-		  loop: true,
-		  volume: 0,
-		  preload: true,
-		  usingWebAudio: true
-		});
-
-		const sounds = [
-			{
-				color: "blue",
-				shape: "triangle",
-				sound: melody1
-			},
-			{
-				color: "blue",
-				shape: "square",
-				sound: melody2
-			},
-			{
-				color: "blue",
-				shape: "pentagon",
-				sound: melody3
-			},
-			{
-				color: "blue",
-				shape: "circle",
-				sound: melody4
-			},
-
-
-
-			{
-				color: "orange",
-				shape: "triangle",
-				sound: perc1
-			},
-			{
-				color: "orange",
-				shape: "square",
-				sound: perc2
-			},
-			{
-				color: "orange",
-				shape: "pentagon",
-				sound: perc3
-			},
-			{
-				color: "orange",
-				shape: "circle",
-				sound: perc4
-			},
-
-
-
-			{
-				color: "purple",
-				shape: "triangle",
-				sound: arp1
-			},
-			{
-				color: "purple",
-				shape: "square",
-				sound: arp2
-			},
-			{
-				color: "purple",
-				shape: "pentagon",
-				sound: arp3
-			},
-			{
-				color: "purple",
-				shape: "circle",
-				sound: arp4
-			},
-
-
-
-			{
-				color: "pink",
-				shape: "triangle",
-				sound: pads1
-			},
-			{
-				color: "pink",
-				shape: "square",
-				sound: pads2
-			},
-			{
-				color: "pink",
-				shape: "pentagon",
-				sound: pads3
-			},
-			{
-				color: "pink",
-				shape: "circle",
-				sound: pads4
-			}
-		];
-	</script>
-	<script>
-		const colors = ["blue", "pink", "purple", "orange"];
-		const shapes = ["triangle", "square", "pentagon", "circle"];
-
-		let blocks = [];
-		for (c of colors) {
-			for (s of shapes) {
-				blocks.push(`${c} ${s}`)
-			}
-		}
-
-		let activeBlocks = new Set();
-
-		const table = document.querySelector("#bb-table");
-		const layoutColorMapping = {
-			"blue": "left",
-			"pink": "top",
-			"purple": "bottom",
-			"orange": "right"
-		};
-		const blocksElements = blocks.map((b) => {
-			const block = document.createElement("div");
-			block.classList.add(...b.split(" "), "shape");
-			const [color, shape] = b.split(" ");
-			block.setAttribute("data-color", color);
-			block.setAttribute("data-shape", shape);
-			document.querySelector("#" + layoutColorMapping[color]).appendChild(block);
-			return block;
-		});
-
-		function isInsideCenter (element) {
-			const block = element.getBoundingClientRect();
-			const center = document.querySelector("#bb-table-center").getBoundingClientRect();
-
-			return (
-				block.x + (block.width/2) > center.x &&
-				block.y + (block.height/2) > center.y &&
-				block.x + (block.width/2) < center.x + center.width &&
-				block.y + (block.height/2) < center.y + center.height
-			)
-		}
-
-		function dragElement(elmnt) {
-		  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-		  elmnt.onmousedown = dragMouseDown;
-
-		  function dragMouseDown(e) {
-		  	elmnt.style.position= "absolute";
-		    e = e || window.event;
-		    // get the mouse cursor position at startup:
-		    pos3 = e.clientX;
-		    pos4 = e.clientY;
-		    document.onmouseup = closeDragElement;
-		    // call a function whenever the cursor moves:
-		    document.onmousemove = elementDrag;
-		  }
-
-		  function elementDrag(e) {
-		    e = e || window.event;
-
-		    // calculate the new cursor position:
-		    pos1 = pos3 - e.clientX;
-		    pos2 = pos4 - e.clientY;
-		    pos3 = e.clientX;
-		    pos4 = e.clientY;
-
-		    // set the element's new position:
-		    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-		    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-		  }
-
-		  function closeDragElement() {
-		    const color = elmnt.getAttribute("data-color");
-		    const shape = elmnt.getAttribute("data-shape");
-		    const s = sounds.find(
-		    	block => (block.color == color && block.shape == shape)
-	    	).sound;
-
-		    if (isInsideCenter(elmnt)) {
-		    	console.log(`Element is inside`);
-		    	activeBlocks.add(elmnt);
-		    	console.log(`activeBlocks: ${[...activeBlocks]}`);
-		    	s.fade(0, 1, 100);
-		    } else {
-		    	console.log("Element is outside")
-		    	activeBlocks.delete(elmnt);
-		    	console.log(`activeBlocks: ${[...activeBlocks]}`);
-		    	s.fade(1, 0, 100);
-		    }
-
-		    /* stop moving when mouse button is released:*/
-		    document.onmouseup = null;
-		    document.onmousemove = null;
-		  }
-		}
-
-		window.onload = function () {
-			setTimeout(() => {
-				positioning = [...document.querySelectorAll(".shape")].map(s => s.getBoundingClientRect());
-				[...document.querySelectorAll(".shape")].forEach((s, index) => {
-				  s.style.position = "fixed";
-				  s.style.left = positioning[index].left + "px";
-				  s.style.top = positioning[index].top + "px";
-				  s.parentNode.style.display = "unset";
-				  s.parentNode.style.position = "unset";
-				});
-
-				blocksElements.forEach(block => dragElement(block));
-			}, 1000);
-		}
-
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<script src="/js/beatblocks-prototype.js"></script>
 </body>
 </html>
