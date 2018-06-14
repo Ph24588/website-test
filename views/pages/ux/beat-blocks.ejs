@@ -3,6 +3,7 @@
 <head>
 	<title>Beat Blocks</title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800" rel="stylesheet">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -288,6 +289,10 @@
 		margin-top: 50px;
 	}
 
+	.dragMe {
+		cursor: -webkit-grab;
+	}
+
 	/*Add new queries to template*/
 	@media (max-width: 10000px) and (min-width: 2561px) {
 		.copyBContainer {
@@ -553,11 +558,13 @@
 			<div id="lastGradient"></div>
 			<div class="wideContainer">
 			<div style="width: 150px; height: 100px; float: left;"></div>
-				<img class="finalMockup" id="finalMockup_1" style="margin-right: 50px;" src="beatblocks/table-top.png">
-				<img class="finalMockup" id="finalMockup_2" style="margin-right: 50px;" src="beatblocks/table-front.png">
-				<img class="finalMockup" id="finalMockup_3" style="margin-right: 50px;" src="beatblocks/pink-blocks.png">
-				<img class="finalMockup" id="finalMockup_4" style="margin-right: 50px;" src="beatblocks/people-1.png">
-				<img class="finalMockup" id="finalMockup_5" style="margin-right: 50px;" src="beatblocks/people-2.png">
+				<div class="dragMe">
+					<img class="finalMockup" id="finalMockup_1" style="margin-right: 50px;" src="beatblocks/table-top.png">
+					<img class="finalMockup" id="finalMockup_2" style="margin-right: 50px;" src="beatblocks/table-front.png">
+					<img class="finalMockup" id="finalMockup_3" style="margin-right: 50px;" src="beatblocks/pink-blocks.png">
+					<img class="finalMockup" id="finalMockup_4" style="margin-right: 50px;" src="beatblocks/people-1.png">
+					<img class="finalMockup" id="finalMockup_5" style="margin-right: 50px;" src="beatblocks/people-2.png">
+				</div>
 		    </div>
 		    <div class="copyDContainer">
 				<h2 style="margin-left: 0;">Exhibition</h2>
@@ -646,6 +653,9 @@
 		} else if (scrollValue > 1900 && $(window).width() > 985 || scrollValue < 300 && $(window).width() > 985) {
 			$(".copyBContainer").fadeOut(500);
 		};
+	});
+	$(".dragMe").draggable({
+		axis: "x"
 	});
 </script>
 </body>

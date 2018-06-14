@@ -70,7 +70,7 @@ const projects = [
     "img": $("#pupperImg"),
     "type": "UX",
     "cardText":    "<p>Pupper is a mobile based service that<br> would allow you to rent a dog for a short period of time.</p>",
-    "popoverText": "Have you ever wanted a dog, but without the responsibility of owning one? What if there was an app that let you rent one for a weekend, or even for an event? Pupper is an iOS application that allows you to do just that.",
+    "popoverText": "Pupper is a mobile based service that<br> would allow you to rent a dog for a short period of time.",
     "animation": bga_3
   },
   {
@@ -78,7 +78,7 @@ const projects = [
     "img": $("#agioImg"),
     "type": "UX",
     "cardText":    "<p>During the summer of 2016, a group of developers and I created a mobile app <br>that allows employees to easily use their employee discounts with fellow co-workers.</p>",
-    "popoverText": "Large companies typically offer an abundance of perks to their employees, but sometimes they’re scattered all over the place, making them hard to find and use. Our team created an app that allows employees to easily access all discounts and invite coworkers out to lunch.",
+    "popoverText": "During the summer of 2016, a group of developers and I created a mobile app <br>that allows employees to easily use their employee discounts with fellow co-workers.",
     "animation": bga_4
   },
   {
@@ -93,8 +93,8 @@ const projects = [
     "el": $("#cooleaf"),
     "img": $("#cooleafImg"),
     "type": "UX",
-    "cardText":    "<p>Cooleaf aims to increase employee engagement using their web platform. <br><br>I designed their mobile platform.</p>",
-    "popoverText": "Cooleaf aims to increase employee engagement using their web platform. <br><br>I designed their mobile platform.",
+    "cardText":    "<p>JPEX keeps people coming out of rehab accountable to help them overcome their addictions.<br><br>I designed their mobile platform.</p>",
+    "popoverText": "JPEX keeps people coming out of rehab accountable to help them overcome their addictions.<br><br>I designed their mobile platform.",
     "animation": bga_6
   }
 ].forEach(({el: element, img, cardText, popoverText, animation}) => {
