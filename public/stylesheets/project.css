@@ -438,3 +438,15 @@ a {
     background-size: cover;
     padding-bottom: 100px;
 }
+
+@media (max-width: 600px) {
+	#lastGradient {
+		min-height: 1750px;
+		top: 4500px;
+	}
+}
+
+.finalMockup {
+	margin-left: 40px;
+	max-width: 100%;
+}
