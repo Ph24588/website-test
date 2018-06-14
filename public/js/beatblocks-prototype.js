@@ -1,145 +1,129 @@
 const pads1 = new Howl({
-  src: ['/beatblocks/assets/sounds/pads 1.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/pads 1.ogg', '/beatblocks/assets/sounds/m4a/pads 1.m4a', '/beatblocks/assets/sounds/webm/pads 1.webm', '/beatblocks/assets/sounds/m4a/pads 1.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const pads2 = new Howl({
-  src: ['/beatblocks/assets/sounds/pads 2.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/pads 2.ogg', '/beatblocks/assets/sounds/m4a/pads 2.m4a', '/beatblocks/assets/sounds/webm/pads 2.webm', '/beatblocks/assets/sounds/m4a/pads 2.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const pads3 = new Howl({
-  src: ['/beatblocks/assets/sounds/pads 3.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/pads 3.ogg', '/beatblocks/assets/sounds/m4a/pads 3.m4a', '/beatblocks/assets/sounds/webm/pads 3.webm', '/beatblocks/assets/sounds/m4a/pads 3.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const pads4 = new Howl({
-  src: ['/beatblocks/assets/sounds/pads 4.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/pads 4.ogg', '/beatblocks/assets/sounds/m4a/pads 4.m4a', '/beatblocks/assets/sounds/webm/pads 4.webm', '/beatblocks/assets/sounds/m4a/pads 4.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const arp1 = new Howl({
-  src: ['/beatblocks/assets/sounds/arp 1.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/arp 1.ogg', '/beatblocks/assets/sounds/m4a/arp 1.m4a', '/beatblocks/assets/sounds/webm/arp 1.webm', '/beatblocks/assets/sounds/m4a/arp 1.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const arp2 = new Howl({
-  src: ['/beatblocks/assets/sounds/arp 2.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/arp 2.ogg', '/beatblocks/assets/sounds/m4a/arp 2.m4a', '/beatblocks/assets/sounds/webm/arp 2.webm', '/beatblocks/assets/sounds/m4a/arp 2.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const arp3 = new Howl({
-  src: ['/beatblocks/assets/sounds/arp 3.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/arp 3.ogg', '/beatblocks/assets/sounds/m4a/arp 3.m4a', '/beatblocks/assets/sounds/webm/arp 3.webm', '/beatblocks/assets/sounds/m4a/arp 3.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const arp4 = new Howl({
-  src: ['/beatblocks/assets/sounds/arp 4.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/arp 4.ogg', '/beatblocks/assets/sounds/m4a/arp 4.m4a', '/beatblocks/assets/sounds/webm/arp 4.webm', '/beatblocks/assets/sounds/m4a/arp 4.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const melody1 = new Howl({
-  src: ['/beatblocks/assets/sounds/melody 1.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/melody 1.ogg', '/beatblocks/assets/sounds/m4a/melody 1.m4a', '/beatblocks/assets/sounds/webm/melody 1.webm', '/beatblocks/assets/sounds/m4a/melody 1.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const melody2 = new Howl({
-  src: ['/beatblocks/assets/sounds/melody 2.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/melody 2.ogg', '/beatblocks/assets/sounds/m4a/melody 2.m4a', '/beatblocks/assets/sounds/webm/melody 2.webm', '/beatblocks/assets/sounds/m4a/melody 2.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const melody3 = new Howl({
-  src: ['/beatblocks/assets/sounds/melody 3.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/melody 3.ogg', '/beatblocks/assets/sounds/m4a/melody 3.m4a', '/beatblocks/assets/sounds/webm/melody 3.webm', '/beatblocks/assets/sounds/m4a/melody 3.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const melody4 = new Howl({
-  src: ['/beatblocks/assets/sounds/melody 4.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/melody 4.ogg', '/beatblocks/assets/sounds/m4a/melody 4.m4a', '/beatblocks/assets/sounds/webm/melody 4.webm', '/beatblocks/assets/sounds/m4a/melody 4.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const perc1 = new Howl({
-  src: ['/beatblocks/assets/sounds/perc 1.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/perc 1.ogg', '/beatblocks/assets/sounds/m4a/perc 1.m4a', '/beatblocks/assets/sounds/webm/perc 1.webm', '/beatblocks/assets/sounds/m4a/perc 1.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const perc2 = new Howl({
-  src: ['/beatblocks/assets/sounds/perc 2.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/perc 2.ogg', '/beatblocks/assets/sounds/m4a/perc 2.m4a', '/beatblocks/assets/sounds/webm/perc 2.webm', '/beatblocks/assets/sounds/m4a/perc 2.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const perc3 = new Howl({
-  src: ['/beatblocks/assets/sounds/perc 3.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/perc 3.ogg', '/beatblocks/assets/sounds/m4a/perc 3.m4a', '/beatblocks/assets/sounds/webm/perc 3.webm', '/beatblocks/assets/sounds/m4a/perc 3.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const perc4 = new Howl({
-  src: ['/beatblocks/assets/sounds/perc 4.ogg'],
-  autoplay: true,
+  src: ['/beatblocks/assets/sounds/ogg/perc 4.ogg', '/beatblocks/assets/sounds/m4a/perc 4.m4a', '/beatblocks/assets/sounds/webm/perc 4.webm', '/beatblocks/assets/sounds/m4a/perc 4.m4a'],
+  autoplay: false,
   loop: true,
   volume: 0,
-  preload: true,
-  usingWebAudio: true
+  preload: true
 });
 
 const sounds = [
@@ -263,6 +247,11 @@ const blocksElements = blocks.map((b) => {
   block.setAttribute("data-color", color);
   block.setAttribute("data-shape", shape);
   document.querySelector("#" + layoutColorMapping[color]).appendChild(block);
+
+  block.addEventListener("mousedown", () => {
+    sounds.forEach(s => s.sound.play());
+    console.log("Playing...")
+  });
   return block;
 });
 
