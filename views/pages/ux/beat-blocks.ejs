@@ -482,6 +482,32 @@
 			width: 93%;
 		}
 	}
+
+	
+	#lastGradient {
+		position: absolute;
+	    top: 4200px;
+	    bottom: 0;
+	    width: 100%;
+	    background: url(/gradient2.svg) no-repeat;
+	    min-height: 1050px;
+	    display: block;
+	    content: "foo";
+	    background-size: cover;
+	    padding-bottom: 100px;
+	}
+
+	@media (max-width: 600px) {
+		#lastGradient {
+			min-height: 1750px;
+			top: 4500px;
+		}
+	}
+
+	.finalMockup {
+		margin-left: 40px;
+		max-width: 100%;
+	}
 </style>
 		<div id="wrapper">
 			<div class="lightBox">
@@ -524,7 +550,7 @@
 					<p class="copyC">Our front–end was displayed onto the acrylic table top, from underneath, by a projector. It indicated what color made certain kinds of sounds as well as show how many people could use our table. It also indicated when people could place in a block with a blinking glow in the center.</p>
 				</div>
 			</div>
-			<img class="background" src="gradient2.svg" id="bg_2">
+			<div id="lastGradient"></div>
 			<div class="wideContainer">
 			<div style="width: 150px; height: 100px; float: left;"></div>
 				<img class="finalMockup" id="finalMockup_1" style="margin-right: 50px;" src="beatblocks/table-top.png">
@@ -544,7 +570,7 @@
 				<a class="button" style="display: none;" id="over400">
 					<div class="buttonText">View prototype</div>
 				</a>
-				<a class="button" style="display: none;" id="under400" href="https://marvelapp.com/10hhbb8" target="_blank">
+				<a class="button" style="display: none;" id="under400" href="/beat-blocks/prototype" target="_blank">
 					<div class="buttonText">View prototype</div>
 				</a>
 		    </div>
