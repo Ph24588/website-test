@@ -67,3 +67,6 @@ $(document).scroll(function(){
 		$(".copyBContainer").fadeOut(500);
 	};
 });
+$(".dragMe").draggable({
+		axis: "x"
+});

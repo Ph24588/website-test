@@ -113,10 +113,6 @@
 		top: 600px;
 	}
 
-	#bg_2 {
-		top: 4200px;
-	}
-
 	.copyBContainer {
 		position: fixed;
 		display: block;
@@ -389,53 +385,6 @@
 		}
 	}
 
-	/*MQ for this layout only*/
-	@media (max-width: 882px) {
-
-		#bg_2 {
-			top: 4500px;
-		}
-
-		.wideContainer {
-			top: 4750px;
-		}
-
-		.copyDContainer {
-			top: 5190px;
-		}
-	}
-
-	@media (max-width: 799px) {
-		#bg_1 {
-			width: 1550px;
-		}
-
-		.researchContainer {
-			top: 1350px;
-		}
-
-		.largeWireframeContainer {
-			top: 2500px;
-			left: 12%;
-			width: 100%;
-			height: 2000px;
-			display: block;
-			position: absolute;
-		}
-
-		#bg_2 {
-			top: 4700px;
-		}
-
-		.wideContainer {
-			top: 4950px;
-		}
-
-		.copyDContainer {
-			top: 5390px;
-		}
-	}
-
 	@media (max-width: 878px) and (min-width: 708px) {
 		.mockup {
 			margin-right: -42%;
@@ -499,20 +448,68 @@
 	    display: block;
 	    content: "foo";
 	    background-size: cover;
-	    padding-bottom: 100px;
+	    padding-bottom: 200px;
 	}
 
-	@media (max-width: 600px) {
+	/*MQ for this layout only*/
+	@media (max-width: 882px) {
+
 		#lastGradient {
-			min-height: 1750px;
+			min-height: 1050px;
 			top: 4500px;
+		}
+
+		.wideContainer {
+			top: 4750px;
+		}
+
+		.copyDContainer {
+			top: 5190px;
 		}
 	}
 
-	.finalMockup {
-		margin-left: 40px;
-		max-width: 100%;
+	@media (max-width: 802px) {
+
+		#lastGradient {
+			padding-bottom: 450px;
+		}
 	}
+
+	@media (max-width: 799px) {
+		#bg_1 {
+			width: 1550px;
+		}
+
+		.researchContainer {
+			top: 1350px;
+		}
+
+		.largeWireframeContainer {
+			top: 2500px;
+			left: 12%;
+			width: 100%;
+			height: 2000px;
+			display: block;
+			position: absolute;
+		}
+
+		#lastGradient {
+			top: 4700px;
+		}
+
+		.wideContainer {
+			top: 4950px;
+		}
+
+		.copyDContainer {
+			top: 5390px;
+		}
+	}
+
+		.finalMockup {
+			margin-left: 40px;
+			max-width: 100%;
+		}
 </style>
 		<div id="wrapper">
 			<div class="lightBox">
@@ -646,7 +643,6 @@
 			$("#mockup_2").css("margin-top", -125 + scrollValue/11.9);
 			$("#mockup_3").css("margin-top", -125 + scrollValue/11.8);
 		};
-	 	
 
 		if (scrollValue > 300 && scrollValue < 1500) {
 			$(".copyBContainer").fadeIn(500);

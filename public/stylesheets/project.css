@@ -96,10 +96,6 @@ a {
 	top: 600px;
 }
 
-#bg_2 {
-	top: 4200px;
-}
-
 .copyBContainer {
 	position: fixed;
 	display: block;
@@ -271,6 +267,9 @@ a {
 	margin-top: 50px;
 }
 
+.dragMe {
+	cursor: -webkit-grab;
+}
 
 @media (min-width: 1440px) {
 	.copyBContainer {
@@ -296,12 +295,6 @@ a {
 
 	.copyBContainer {
 		left: 600px;
-	}
-}
-
-@media (max-width: 1003px) {
-	.wireframe{
-		float: left;
 	}
 }
 
@@ -355,10 +348,6 @@ a {
 		height: 2000px;
 		display: block;
 		position: absolute;
-	}
-
-	#bg_2 {
-		top: 4500px;
 	}
 
 	.wideContainer {
@@ -436,13 +425,31 @@ a {
     display: block;
     content: "foo";
     background-size: cover;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1003px) {
 	#lastGradient {
-		min-height: 1750px;
+		max-height: 1750px;
 		top: 4500px;
+	}
+
+	.wideContainer {
+		top: 4700px;
+	}
+
+	.copyDContainer {
+		top: 5150px;
+	}
+
+	.wireframe{
+		float: left;
+	}
+}
+
+@media (max-width: 802px) {
+	#lastGradient {
+		padding-bottom: 400px;
 	}
 }
 
