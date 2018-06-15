@@ -28,11 +28,22 @@ img{
 	display: inline-block;
 }
 
+iframe {
+	width: 50%;
+	height: 300px;
+	position: relative;
+	display: inline-block;
+}
+
 .images{
 	width: 100%;
 	height: auto;
 	margin-left: 5%;
 	margin-top: 120px;
+}
+
+.images img {
+	box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
 }
 
 h1{
@@ -102,6 +113,12 @@ p{
 		height: auto;
 		margin-left: 10%;
 		position: relative;
+	}
+	iframe {
+		width: 80%;
+		height: 300px;
+		position: relative;
+		display: inline-block;
 	}
 	img{
 		width: 80%;
